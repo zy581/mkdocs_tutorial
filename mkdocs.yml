@@ -1,0 +1,107 @@
+site_name: MkDocs Material 教程
+site_url: https://your-username.github.io/mkdocs-tutorial/
+site_author: 你的名字
+site_description: 使用MkDocs Material主题构建专业文档的完整教程
+
+repo_name: your-username/mkdocs-tutorial
+repo_url: https://github.com/your-username/mkdocs-tutorial
+
+copyright: 版权 © 2024 你的名字
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: 'blue'
+      accent: 'blue'
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - scheme: slate
+      primary: 'blue'
+      accent: 'blue'
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: timeago
+
+markdown_extensions:
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username
+      name: GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/your-username
+      name: Twitter
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+
+nav:
+  - 首页: index.md
+  - 快速开始:
+    - 安装: getting-started/installation.md
+    - 创建项目: getting-started/creating-project.md
+    - 本地预览: getting-started/serving.md
+  - 配置指南:
+    - 基本配置: configuration/basic.md
+    - 主题定制: configuration/theming.md
+    - 插件使用: configuration/plugins.md
+  - 写作技巧:
+    - Markdown扩展: writing/extensions.md
+    - 代码高亮: writing/code.md
+    - 图表和图示: writing/diagrams.md
+  - 部署:
+    - GitHub Pages: deployment/github-pages.md
+    - 其他平台: deployment/other-platforms.md
+  - 进阶主题:
+    - 自定义CSS: advanced/custom-css.md
+    - 多语言支持: advanced/i18n.md
+    - 性能优化: advanced/performance.md

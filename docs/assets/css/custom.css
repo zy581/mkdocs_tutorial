@@ -1,0 +1,259 @@
+/* 自定义CSS样式 */
+
+:root {
+  /* 主色调 */
+  --md-primary-fg-color: #1976D2;
+  --md-primary-fg-color--light: #42A5F5;
+  --md-primary-fg-color--dark: #1565C0;
+  --md-accent-fg-color: #FF4081;
+
+  /* 背景颜色 */
+  --md-background-color: #FFFFFF;
+  --md-background-secondary-color: #F5F5F5;
+  --md-code-background-color: #F5F5F5;
+
+  /* 字体 */
+  --md-text-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --md-code-font-family: 'Fira Code', 'Courier New', monospace;
+  --md-text-font-size: 16px;
+  --md-code-font-size: 14px;
+
+  /* 间距 */
+  --md-content-max-width: 900px;
+  --md-spacing: 1rem;
+}
+
+/* 深色模式支持 */
+[data-md-color-scheme="slate"] {
+  --md-background-color: #121212;
+  --md-background-secondary-color: #1E1E1E;
+  --md-code-background-color: #2D2D2D;
+}
+
+/* 卡片组件样式 */
+.card {
+  background-color: var(--md-background-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  color: var(--md-primary-fg-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.card-content {
+  color: var(--md-text-color);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.card-content ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.card-content li {
+  margin: 0.25rem 0;
+}
+
+.card-footer {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 1rem;
+}
+
+/* 按钮样式 */
+.md-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.md-button:hover {
+  background-color: var(--md-primary-fg-color--dark);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 卡片网格布局 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* 响应式设计 */
+.md-content {
+  max-width: var(--md-content-max-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .md-content {
+    padding: 1rem;
+  }
+}
+
+/* 标题样式 */
+.md-content h1 {
+  color: var(--md-primary-fg-color);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  border-bottom: 2px solid var(--md-primary-fg-color--light);
+  padding-bottom: 0.5rem;
+}
+
+.md-content h2 {
+  color: var(--md-primary-fg-color--dark);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.md-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* 代码块样式 */
+.md-content pre {
+  background-color: var(--md-code-background-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.md-content code {
+  background-color: var(--md-code-background-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: var(--md-code-font-family);
+}
+
+/* 表格样式 */
+.md-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.md-content th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.md-content td {
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.md-content tr:nth-child(even) {
+  background-color: var(--md-background-secondary-color);
+}
+
+.md-content tr:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--md-background-secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-primary-fg-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-primary-fg-color--dark);
+}
+
+/* 动画效果 */
+.md-content a {
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* 引用块样式 */
+.md-content blockquote {
+  background-color: var(--md-background-secondary-color);
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* 提示框样式 */
+.admonition {
+  border-radius: 8px;
+  border-left: 4px solid;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.admonition-title {
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.admonition-content {
+  padding: 1rem;
+  margin: 0;
+}
