@@ -3,8 +3,8 @@ site_url: https://your-username.github.io/mkdocs-tutorial/
 site_author: 你的名字
 site_description: 使用MkDocs Material主题构建专业文档的完整教程
 
-repo_name: your-username/mkdocs-tutorial
-repo_url: https://github.com/your-username/mkdocs-tutorial
+repo_name: wsx/mkdocs-tutorial
+repo_url: https://github.com/wsx/mkdocs-tutorial
 
 copyright: 版权 © 2024 你的名字
 
