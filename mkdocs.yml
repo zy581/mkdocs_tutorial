@@ -1,34 +1,32 @@
-site_name: MkDocs Material 教程
-site_url: https://your-username.github.io/mkdocs-tutorial/
-site_author: 你的名字
-site_description: 使用MkDocs Material主题构建专业文档的完整教程
+site_name: MkDocs Material
+site_url: https://semhaq.github.io/mkdocs_tutorial/
+site_author: SEMHAQ
+site_description: 现代文档工具展示项目
 
-repo_name: wsx/mkdocs-tutorial
-repo_url: https://github.com/wsx/mkdocs-tutorial
+repo_name: SEMHAQ/mkdocs-tutorial
+repo_url: https://github.com/SEMHAQ/mkdocs-tutorial
 
-copyright: 版权 © 2024 你的名字
+copyright: 版权 © 2026 SEMHAQ
 
 theme:
   name: material
   palette:
     - scheme: default
-      primary: 'blue'
-      accent: 'blue'
+      primary: 'black'
+      accent: 'black'
       toggle:
         icon: material/weather-night
         name: 切换到深色模式
     - scheme: slate
-      primary: 'blue'
-      accent: 'blue'
+      primary: 'black'
+      accent: 'black'
       toggle:
         icon: material/weather-sunny
         name: 切换到浅色模式
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assets/logo.png
-  favicon: assets/favicon.png
-  features:
+    features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
@@ -75,14 +73,8 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/your-username
+      link: https://github.com/SEMHAQ
       name: GitHub
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/your-username
-      name: Twitter
-  analytics:
-    provider: google
-    property: G-XXXXXXXXXX
 
 nav:
   - 首页: index.md
