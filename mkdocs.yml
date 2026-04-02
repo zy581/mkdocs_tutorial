@@ -6,7 +6,7 @@ site_description: 现代文档工具展示项目
 repo_name: SEMHAQ/mkdocs-tutorial
 repo_url: https://github.com/SEMHAQ/mkdocs-tutorial
 
-copyright: 版权 © 2026 SEMHAQ
+copyright: Copyright © 2026 SEMHAQ
 
 theme:
   name: material
@@ -39,7 +39,11 @@ plugins:
   - git-revision-date-localized:
       type: timeago
 
+
 markdown_extensions:
+
+  - admonition
+  - pymdownx.superfences
   - attr_list
   - def_list
   - footnotes
@@ -75,6 +79,11 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/SEMHAQ
       name: GitHub
+
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - 首页: index.md
